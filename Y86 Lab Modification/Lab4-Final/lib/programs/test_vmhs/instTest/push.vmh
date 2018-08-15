@@ -1,0 +1,15 @@
+//Original Code
+//                    	//  # Test of Push semantics for Y86
+//30f40001000000000000  //  irmovq $0x100 , %rsp  # Initialize stack pointer
+//2040         		    //  rrmovq %rsp   , %rax  # Save stack pointer
+//a04f         		    //  pushq  %rsp           # Push the stack pointer (old or new?)
+//b02f        	        //  popq   %rdx           # Get it back
+//6120         		    //  subq   %rdx   , %rax  # Compute difference.  Either 0 (old) or 4 (new).
+//c00e		   		    //  mtc0    $rax  , $14
+//00           		    //  halt
+
+//Dumped Result
+@000
+30f4000100000000
+00002040a04fb02f
+6120c00e00000000

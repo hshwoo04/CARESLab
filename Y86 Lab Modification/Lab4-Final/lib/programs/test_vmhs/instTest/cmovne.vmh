@@ -1,0 +1,18 @@
+//Original Code
+//@000		     		 //   .init
+//30f00100000000000000   //   irmovq  $1   , %rax   # rax = 1
+//30f50000000000000000   //   irmovq  $0   , %rbp   # rbp = 0
+//30f10100000000000000   //	  irmovq  $1   , %rcx   # rcx = 1
+//6051		     		 //   addq    %rbp , %rcx   # rcx = rbp + rcx = 1  
+//2450		     		 //   cmovne  %rbp , %rax   # rax = rbp = 0  , if condition holds (should hold)
+//c00e		    		 //   mtc0    %rax , $14    # check result.
+//00			 		 //   halt
+
+//Dumped Result
+@000
+30f0010000000000
+000030f500000000
+0000000030f10100
+0000000000006051
+2450c00e00000000
+

@@ -1,0 +1,203 @@
+testing irmovq
+===========================
+==================================
+Number of Cycles      :                    8
+Executed Instructions :                    2
+Result                :     PASSED
+==================================
+ 
+testing rrmovq
+===========================
+==================================
+Number of Cycles      :                   36
+Executed Instructions :                    9
+Result                :     PASSED
+==================================
+ 
+testing mrmovq
+===========================
+==================================
+Number of Cycles      :                   28
+Executed Instructions :                    7
+Result                :     PASSED
+==================================
+ 
+testing rmmovq
+===========================
+==================================
+Number of Cycles      :                   36
+Executed Instructions :                    9
+Result                :     PASSED
+==================================
+ 
+testing addq
+===========================
+==================================
+Number of Cycles      :                   28
+Executed Instructions :                    7
+Result                :     PASSED
+==================================
+ 
+testing subq
+===========================
+==================================
+Number of Cycles      :                   28
+Executed Instructions :                    7
+Result                :     PASSED
+==================================
+ 
+testing andq
+===========================
+==================================
+Number of Cycles      :                   28
+Executed Instructions :                    7
+Result                :     PASSED
+==================================
+ 
+testing xorq
+===========================
+==================================
+Number of Cycles      :                   28
+Executed Instructions :                    7
+Result                :     PASSED
+==================================
+ 
+testing cmovg
+===========================
+==================================
+Number of Cycles      :                   28
+Executed Instructions :                    7
+Result                :     PASSED
+==================================
+ 
+testing cmovge
+===========================
+==================================
+Number of Cycles      :                   28
+Executed Instructions :                    7
+Result                :     PASSED
+==================================
+===========================
+==================================
+Number of Cycles      :                   28
+Executed Instructions :                    7
+Result                :     PASSED
+==================================
+ 
+testing cmovl
+===========================
+==================================
+Number of Cycles      :                   28
+Executed Instructions :                    7
+Result                :     PASSED
+==================================
+ 
+testing cmovle
+===========================
+==================================
+Number of Cycles      :                   28
+Executed Instructions :                    7
+Result                :     PASSED
+==================================
+===========================
+==================================
+Number of Cycles      :                   28
+Executed Instructions :                    7
+Result                :     PASSED
+==================================
+ 
+testing cmovne
+===========================
+==================================
+Number of Cycles      :                   24
+Executed Instructions :                    6
+Result                :     PASSED
+==================================
+===========================
+==================================
+Number of Cycles      :                   24
+Executed Instructions :                    6
+Result                :     PASSED
+==================================
+ 
+testing jump
+===========================
+==================================
+Number of Cycles      :                   16
+Executed Instructions :                    4
+Result                :     PASSED
+==================================
+ 
+testing push
+===========================
+==================================
+Number of Cycles      :                   24
+Executed Instructions :                    6
+Result                :     PASSED
+==================================
+ 
+testing pop
+===========================
+==================================
+Number of Cycles      :                   24
+Executed Instructions :                    6
+Result                :     PASSED
+==================================
+ 
+ 
+Running Test programs...
+Running Cjr...
+===========================
+==================================
+Number of Cycles      :                   36
+Executed Instructions :                    9
+Result                :     PASSED
+==================================
+ 
+Running asum...
+===========================
+==================================
+Number of Cycles      :                  216
+Executed Instructions :                   54
+Result                :     PASSED
+==================================
+ 
+Running asum_ij...
+===========================
+==================================
+Number of Cycles      :                 7944
+Executed Instructions :                 1986
+Result                :     PASSED
+==================================
+ 
+Running asum_ji...
+===========================
+==================================
+Number of Cycles      :                 8460
+Executed Instructions :                 2115
+Result                :     PASSED
+==================================
+ 
+Running bubble...
+===========================
+==================================
+Number of Cycles      :                 1116
+Executed Instructions :                  279
+Result                :     PASSED
+==================================
+ 
+Running htower...
+===========================
+==================================
+Number of Cycles      :                10928
+Executed Instructions :                 2732
+Result                :     PASSED
+==================================
+ 
+Running fibonacci...
+===========================
+==================================
+Number of Cycles      :                39524
+Executed Instructions :                 9881
+Result                :     PASSED
+==================================

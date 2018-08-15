@@ -1,0 +1,16 @@
+//Original Code
+//@000            		//  # Test of Pop semantics for Y86
+//30f40001000000000000 	// 	irmovq $0x100 , %rsp  # Initialize stack pointer
+//30f0cdab000000000000 	//	irmovq $0xABCD, %rax 
+//a00f         			// 	pushq  %rax         # Put known value on stack
+//b02f         			//	popq   %rdx         # 
+//6120					//  subq   %rdx   , %rax  # compare esp and eax
+//c00e					//  mtc0   %rax   , $14	# check result
+//00           			//	halt
+
+//Dumped Result
+@000
+30f4000100000000
+000030f0cdab0000
+00000000a00fb02f
+6120c00e00000000

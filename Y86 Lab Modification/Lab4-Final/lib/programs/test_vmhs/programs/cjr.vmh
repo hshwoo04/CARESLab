@@ -1,0 +1,37 @@
+//Original Code
+//                          //                              # /* $begin cjr-ys */
+//                          //                              # Code to generate a combination of not-taken branch and ret
+//  30f44000000000000000    // 	    irmovq Stack , %rsp
+//  30f02400000000000000    // 	    irmovq rtnp  , %rax
+//  a00f                    // 	    pushq  %rax	            # Set up return pointer
+//  6300                    // 	    xorq   %rax  , %rax     # Set Z condition code
+//  741c00000000000000      // 	    jne    target	        # Not taken (First part of combination)
+//  30f00100000000000000    //      irmovq $1    , %rax     # Should execute this
+//  30f60100000000000000    //	    irmovq $a    , %rsi
+//  6160		            //      subq   %rsi  , %rax
+//  c00e		            //	    mtc0   %rax  , $14
+//  00                      // 	    halt
+//                          // target:
+//  90                      // 	    ret		                # Second part of combination
+//  30f30200000000000000    // 	    irmovq $2    , %rbx	    # Should not execute this
+//  00                      // 	    halt
+//                          // rtnp:
+//  30f20300000000000000    //      irmovq $3    , %rdx     # Should not execute this
+//  00                      // 	    halt
+//                          // .pos 0x40
+//                          // Stack:
+//                          //                              # /* $end cjr-ys */
+
+// Dumped Result
+
+30f4400000000000
+000030f024000000
+00000000a00f6300
+741c000000000000
+0030f00100000000
+00000030f6010000
+00000000006160c0
+0e009030f3020000
+00000000000030f2
+0300000000000000
+0000000000000000

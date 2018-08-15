@@ -1,0 +1,21 @@
+//Original Code
+//@000		   	   	       //   .init
+//30f10300000000000000     //	irmovq	$3	 , %rcx   # rcx = 3
+//30f2fcffffffffffffff     //   irmovq  $-4	 , %rdx   # rdx = -4
+//2016		   	   		   //   rrmovq  %rcx , %rsi   # rsi = rcx = 3
+//2027		   	  		   //   rrmovq  %rdx , %rdi   # rdi = rdx = -4
+//6076		   	   		   //   addq    %rdi , %rsi   # rsi = rsi + rdi = -1
+//30f10100000000000000     //   irmovq  $1   , %rcx   # rcx = 1
+//6061		   	   		   //   addq    %rsi , %rcx   # rcx = rcx + rsi = 0
+//2010		   	  		   //   rrmovq  %rcx , %rax   # rax = rcx = 0
+//c00e		   	  		   //   mtc0    %rax , $14	  # check result.
+//00			 		   //   halt
+
+//Dumped Result
+@000
+30f1030000000000
+000030f2fcffffff
+ffffffff20162027
+607630f101000000
+0000000060612010
+c00e000000000000

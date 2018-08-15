@@ -1,0 +1,18 @@
+//Original Code
+//@000		   	 		 //   .init
+//30f10100000000000000   //	  irmovq  $1   , %rcx   # rcx = 1
+//30f20300000000000000   //	  irmovq  $3   , %rdx   # rdx = 3
+//6212		   	 		 //   andq    %rcx , %rdx   # rdx = rcx & rdx = 'b0001 & 'b0011' = 'b0001 = 1
+//2020		   			 //   rrmovq  %rdx , %rax   # rax = rdx = 1
+//30f10200000000000000   //   irmovq  $2   , %rcx   # rcx = 2
+//6210		   			 //   andq    %rcx , %rax   # rax = rax & rcx = 0
+//c00e		   			 //   mtc0    %rax , $14    # check result.
+//00					 //   halt
+
+//Dumped Result
+@000
+30f1010000000000
+000030f203000000
+0000000062122020
+30f1020000000000
+00006210c00e0000

@@ -1,0 +1,31 @@
+//Original Code
+//@000		    		    //   .init
+//30f44000000000000000		//  irmovq  array  , %rsp   # rsp = array
+//50040000000000000000		//  mrmovq  (%rsp) , %rax   # rax = array[0]
+//50140800000000000000		//  mrmovq 8(%rsp) , %rcx   # rcx = array[1]
+//50241000000000000000		//  mrmovq 16(%rsp), %rdx   # rdx = array[2]
+//6012					    //  addq     %rcx  , %rdx   # rdx = rdx + rcx
+//6120					    //  subq     %rdx  , %rax   # rax = rax - rdx
+//c00e					    //  mtc0     %rax  , $14	# check result.
+//00					    //  halt
+
+//@040					    // address = 256 -> index 0x40
+//0a00000000000000		    // .quad 10
+//0300000000000000		    // .quad 3
+//0700000000000000		    // .quad 7
+
+
+
+//Dumped Result
+@000
+30f4000200000000
+0000500400000000
+0000000050140800
+0000000000005024
+1000000000000000
+60126120c00e0000
+
+@040
+0a00000000000000
+0300000000000000
+0700000000000000

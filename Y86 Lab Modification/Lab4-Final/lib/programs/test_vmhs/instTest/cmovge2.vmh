@@ -1,0 +1,19 @@
+//Original Code
+//@000		     		 //   .init
+//30f0ffffffffffffffff   //   irmovq  $-1  , %rax   # rax = -1
+//30f50000000000000000   //   irmovq  $0   , %rbp   # rbp = 0
+//30f10300000000000000   //	  irmovq  $3   , %rcx   # rcx = 3
+//30f20300000000000000   //	  irmovq  $3   , %rdx   # rdx = 3
+//6112		     		 //   subq    %rcx , %rdx   # rdx = rdx - rcx = 0
+//2550		     		 //   cmovge  %rbp , %rax   # rax = rbp if condition holds
+//c00e		     		 //   mtc0    %rax , $14    # check result.
+//00			 		 //   halt
+
+//Dumped Result
+@000
+30f0ffffffffffff
+ffff30f500000000
+0000000030f10300
+00000000000030f2
+0300000000000000
+61122550c00e0000

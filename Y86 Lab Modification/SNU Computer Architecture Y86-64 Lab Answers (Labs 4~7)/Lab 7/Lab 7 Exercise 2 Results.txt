@@ -1,0 +1,63 @@
+Running Test programs...
+Running asum...
+===========================
+Result                :     PASSED
+Number of Cycles      :                 2809
+Executed Instructions :                  341
+Cache Req Count       :                   57
+Cache Miss Count      :                   20
+===========================
+ 
+Running Array32...
+===========================
+Result                :     PASSED
+Number of Cycles      :                 4237
+Executed Instructions :                  238
+Cache Req Count       :                   36
+Cache Miss Count      :                   35
+===========================
+ 
+Running Array_ij...
+===========================
+Result                :     PASSED
+Number of Cycles      :                12354
+Executed Instructions :                 1986
+Cache Req Count       :                  292
+Cache Miss Count      :                   79
+===========================
+ 
+Running Array_ji...
+===========================
+Result                :     PASSED
+Number of Cycles      :                25677
+Executed Instructions :                 2115
+Cache Req Count       :                  352
+Cache Miss Count      :                  187
+===========================
+ 
+Running bubble...
+===========================
+Result                :     PASSED
+Number of Cycles      :                31167
+Executed Instructions :                13844
+Cache Req Count       :                 3650
+Cache Miss Count      :                   23
+===========================
+ 
+Running fibonacci...
+===========================
+Result                :     PASSED
+Number of Cycles      :                30048
+Executed Instructions :                 9881
+Cache Req Count       :                 5115
+Cache Miss Count      :                   75
+===========================
+ 
+Running htower...
+===========================
+Result                :     PASSED
+Number of Cycles      :                14205
+Executed Instructions :                 2732
+Cache Req Count       :                 1271
+Cache Miss Count      :                   94
+===========================

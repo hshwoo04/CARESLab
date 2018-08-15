@@ -1,0 +1,19 @@
+//Original Code
+//@000		   	 		 //   .init
+//30f10500000000000000   //	  irmovq  $5   , %rcx   # rcx = 5
+//30f20300000000000000   //	  irmovq  $3   , %rdx   # rdx = 3
+//6112		   	 		 //   subq    %rcx , %rdx   # rdx = rdx - rcx = -2
+//2020		   	 		 //   rrmovq  %rdx , %rax   # rax = rdx = -2
+//30f1feffffffffffffff   //   irmovq  $-4  , %rcx   # rcx = -2
+//6110		   	 		 //   subq    %rcx , %rax   # rax = rax - rcx = 0
+//c00e		     		 //   mtc0    %rax , $14    # check result.
+//00			 		 //   halt
+
+//Dumped Result
+@000
+30f1050000000000
+000030f203000000
+0000000061122020
+30f1feffffffffff
+ffff6110c00e0000
+

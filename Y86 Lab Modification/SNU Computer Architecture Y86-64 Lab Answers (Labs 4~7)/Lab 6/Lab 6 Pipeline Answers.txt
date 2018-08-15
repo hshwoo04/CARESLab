@@ -1,0 +1,190 @@
+testing irmovl
+==================================
+Number of Cycles      :                    8
+Executed Instructions :                    2
+Result                :     PASSED
+==================================
+ 
+testing rrmovl
+==================================
+Number of Cycles      :                   22
+Executed Instructions :                    9
+Result                :     PASSED
+==================================
+ 
+testing mrmovl
+==================================
+Number of Cycles      :                   19
+Executed Instructions :                    7
+Result                :     PASSED
+==================================
+ 
+testing rmmovl
+==================================
+Number of Cycles      :                   19
+Executed Instructions :                    9
+Result                :     PASSED
+==================================
+ 
+testing addl
+==================================
+Number of Cycles      :                   19
+Executed Instructions :                    7
+Result                :     PASSED
+==================================
+ 
+testing subl
+==================================
+Number of Cycles      :                   19
+Executed Instructions :                    7
+Result                :     PASSED
+==================================
+ 
+testing andl
+==================================
+Number of Cycles      :                   19
+Executed Instructions :                    7
+Result                :     PASSED
+==================================
+ 
+testing xorl
+==================================
+Number of Cycles      :                   19
+Executed Instructions :                    7
+Result                :     PASSED
+==================================
+ 
+testing cmovg
+==================================
+Number of Cycles      :                   15
+Executed Instructions :                    7
+Result                :     PASSED
+==================================
+ 
+testing cmovge
+==================================
+Number of Cycles      :                   15
+Executed Instructions :                    7
+Result                :     PASSED
+==================================
+==================================
+Number of Cycles      :                   15
+Executed Instructions :                    7
+Result                :     PASSED
+==================================
+ 
+testing cmovl
+==================================
+Number of Cycles      :                   15
+Executed Instructions :                    7
+Result                :     PASSED
+==================================
+ 
+testing cmovle
+==================================
+Number of Cycles      :                   15
+Executed Instructions :                    7
+Result                :     PASSED
+==================================
+==================================
+Number of Cycles      :                   15
+Executed Instructions :                    7
+Result                :     PASSED
+==================================
+ 
+testing cmovne
+==================================
+Number of Cycles      :                   14
+Executed Instructions :                    6
+Result                :     PASSED
+==================================
+==================================
+Number of Cycles      :                   14
+Executed Instructions :                    6
+Result                :     PASSED
+==================================
+ 
+testing jump
+==================================
+Number of Cycles      :                   12
+Executed Instructions :                    4
+Result                :     PASSED
+==================================
+ 
+testing push
+==================================
+Number of Cycles      :                   18
+Executed Instructions :                    6
+Result                :     PASSED
+==================================
+ 
+testing pop
+==================================
+Number of Cycles      :                   18
+Executed Instructions :                    6
+Result                :     PASSED
+==================================
+ 
+ 
+Running Hazard Checking...
+testing control hazard
+==================================
+Number of Cycles      :                   12
+Executed Instructions :                    5
+Result                :     PASSED
+==================================
+testing raw hazard
+==================================
+Number of Cycles      :                   16
+Executed Instructions :                    6
+Result                :     PASSED
+==================================
+testing war hazard
+==================================
+Number of Cycles      :                   14
+Executed Instructions :                    6
+Result                :     PASSED
+==================================
+testing waw hazard
+==================================
+Number of Cycles      :                   16
+Executed Instructions :                    6
+Result                :     PASSED
+==================================
+ 
+ 
+Running Test programs...
+Running Cjr...
+==================================
+Number of Cycles      :                   20
+Executed Instructions :                    9
+Result                :     PASSED
+==================================
+ 
+Running asum...
+==================================
+Number of Cycles      :                  699
+Executed Instructions :                  341
+Result                :     PASSED
+==================================
+ 
+Running bubble...
+==================================
+Number of Cycles      :                29767
+Executed Instructions :                13844
+Result                :     PASSED
+==================================
+ 
+Running htower...
+==================================
+Number of Cycles      :                 6046
+Executed Instructions :                 2732
+Result                :     PASSED
+==================================
+ 
+Running fibonacci...
+==================================
+Number of Cycles      :                23170
+Executed Instructions :                 9881
+Result                :     PASSED
+==================================

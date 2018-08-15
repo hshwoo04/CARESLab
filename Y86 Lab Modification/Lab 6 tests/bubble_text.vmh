@@ -1,0 +1,124 @@
+//bubble.vmh text
+
+@000					// init:	@ address 0
+30f400030000			//6 			irmovq Stack  , %rsp	 
+30f500030000			//12			irmovq Stack  , %rbp
+7070010000				//17			jmp	   Second
+
+
+@005					//20	array(50)
+dddd0000				//24				
+1ee10000				//28				
+4b3b0000				//32
+aaa10000				//36
+ff1f0000				//40
+ee4e0000				//44
+7b6b0000				//48
+aaa70000				//52
+f6ff0000				//56
+5f1f0000				//60
+ee4e0000				//64
+ab3b0000				//68
+5a1a0000				//72
+ff5f0000				//76
+ffff0000				//80
+eee10000				//84
+4b0b0000				//88
+aa9a0000				//92
+5f5f0000				//96
+5fff0000				//100
+2e4e0000				//104
+3b4b0000				//108
+aaaa0000				//112
+ff540000				//116
+5f5f0000				//120
+1eee0000				//124
+bb1b0000				//128
+1a3a0000				//132
+3ff40000				//136
+fff50000				//140
+1eae0000				//144
+1bbb0000				//148
+aa4a0000				//152
+fff50000				//156
+0ff00000				//160
+ee5e0000				//164
+bb310000				//168
+aaaa0000				//172
+ffff0000				//176
+107f0000				//180
+1eee0000				//184
+bb2b0000				//188
+aaaa0000				//192
+3ff30000				//196
+ff0f0000				//200
+eee40000				//204
+4b1b0000				//208
+5aa50000				//212
+116f0000				//126
+fff10000				//130
+
+@038					//224	First : @ address 224	
+a05f					//226			pushq	%rbp
+2045					//228			rrmovq	%%rsp	, %rbp
+a03f					//230			pushq	%rbx
+a06f					//232			pushq	%rsi
+a07f					//234			pushq	%rdi
+501508000000			//240			mrmovq	8(%rbp)	, %rcx
+50050c000000			//246			mrmovq	12(%rbp), %rax
+6000					//248			addq	%rax	, %rax
+6000					//250			addq 	%rax	, %rax
+6010					//252			addq	%rcx	, %rax
+a00f					//254			pushq	%rax
+30f204000000			//260			irmovq	$4		, %rdx
+6012					//262			addq	%rcx	, %rdx
+6120					//264			subq	%rdx	, %rax
+715e010000				//269			jle  	$350
+2023					//271			rrmovq	%rdx	, %rbx
+30f004000000			//277			irmovq	$4		, %rax
+6103					//279			subq	%rax	, %rbx
+507300000000			//285			mrmovq	(%rbx)	, %rdi
+506304000000			//291			mrmovq	4(%rbx)	, %rsi
+2060					//293			rrmovq	%rsi	, %rax
+6170					//295			subq	%rdi	, %rax
+7538010000				//300			jge		$312
+406300000000			//306			rmmovq	%rsi	, (%rbp)
+407304000000			//312			rmmovq	%rdi	, 4(%rbp)
+30f004000000			//318			irmovq	$4		, %rax
+6103					//320			subq	%rax	, %rbx
+2030					//322			rrmovq	%rbx	, %rax
+6110					//324			subq	%rcx	, %rax
+7517010000				//329			jge 	$279
+30f004000000			//335			irmovq	$4		, %rax
+6002					//337			addq	%rax	, %rdx
+500400000000			//343			mrmovq	(%rsp)	, %rax
+6120					//345			subq	%rdx	, %rax
+760d010000				//350			jg 		$269
+b00f					//352			popq	%rax
+b07f					//354			popq	%rdi
+b06f					//356			popq	%rsi
+b03f					//358			popq	%rbx
+2054					//360			rrmovq	%rbp	, %rsp
+b05f					//362			popq	%rbp
+90						//363			ret
+
+@05c					//368	Second : @ address 368
+30f032000000			//374			irmovq	$50		, %rax
+a00f					//376			pushq	%rax
+30f214000000			//382			irmovq	$20		, %rdx
+a02f					//384			pushq	%rdx
+80e0000000				//389			call	$224
+b03f					//391			popq	%rbx
+30f314000000			//397			irmovq	$20		, %rbx
+30f001000000			//403			irmovq	$1		, %rax
+30f104000000			//409			irmovq	$4		, %rcx
+30f205000000			//415			irmovq	$5		, %rdx
+507300000000			//421			mrmovq	(%rbx)	, %rdi
+506304000000			//427			mrmovq	4(%rbx)	, %rsi
+6167					//429			subq	%rsi	, %rdi
+75c1010000				//434			jge		$449
+6013					//436			addq	%rcx	, %rbx
+6102					//438			subq	%rax	, %rdx
+759f010000				//443			jge		$415
+30f000000000			//449			irmovq	$0		, %rax	
+c00e					//451			mtc0 
